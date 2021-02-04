@@ -1,0 +1,38 @@
+<body>
+         <button id="submit" onclick="myFunction()">Submit</button>
+        
+        <button id="edit" onclick="edit()">Edit</button>
+        <button id="save" onclick="save()">Save</button>
+         <p id="statement" onclick="statement()">I want to develop an web page for international community</p>
+         
+       <script>
+           // Below function changes background colour of the page
+           function myFunction(){
+               var submit=document.getElementById('submit');
+              document.body.style.backgroundColor = 'red';
+            
+           }
+              // Below function changes background to another colour of the page
+            function edit(){
+               var edit=document.getElementById('edit');
+              document.body.style.backgroundColor = 'pink';
+            
+           }
+            // Below function changes background colour of the page and also Button color
+            function save(){
+               var save=document.getElementById('save');
+              document.body.style.backgroundColor = 'yellow';
+                save.style.backgroundColor='yellow';
+            
+           }
+           // These changes the only Statement color 
+           function statement(){
+                var statement=document.getElementById('statement');
+              statement.style.color = 'blue';
+           }
+           
+            
+        </script>
+       
+         
+    </body>
