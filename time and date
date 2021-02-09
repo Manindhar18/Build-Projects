@@ -1,0 +1,37 @@
+<body>
+         
+         <div id="clock">
+             <div><span id="hours">00</span><span>Hours</span></div>
+             <div><span id="minutes">00</span><span>Minutes</span></div>
+             <div><span id="seconds">00</span><span>Seconds</span></div>
+             <div><span id="ampm"></div>
+                 <div><span id ="date"></span></div>
+        </div>
+         
+       <script>
+            function clock(){
+                var hours =document.getElementById('hours');
+                var minutes =document.getElementById('minutes');
+                var seconds =document.getElementById('seconds');
+                var ampm= document.getElementById('ampm');
+                var dates=document.getElementById('date');
+                
+                var hour=new Date().getHours();
+                var minute=new Date().getMinutes();
+                var second=new Date().getSeconds();
+                var am = 'AM';
+                var date=new Date().toLocaleDateString();
+                if(hour=>12){
+                    var am='PM';
+                }
+                    hours.innerHTML=hour;
+                    minutes.innerHTML=minute;
+                    seconds.innerHTML=second;
+                ampm.innerHTML=am;
+                dates.innerHTML=date;
+                
+            }
+           var interval =setInterval(clock, 1000);
+           
+            
+        </script>
