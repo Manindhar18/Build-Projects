@@ -1,0 +1,22 @@
+ <body>
+         
+         <button id="btn" type="button" value="Click Me">Click Me</button>
+         
+       <script>
+           var button = document.getElementById('btn');
+             var colors = ['green','red','pink','yellow','blue','black'];
+           
+            button.addEventListener('click', changeColor);
+           function changeColor(){
+             
+              var colorsIndex= parseInt(Math.random()*colors.length);
+                   
+                
+                  document.body.style.backgroundColor=colors[colorsIndex];  
+               
+           }
+            
+        </script>
+       
+         
+    </body>
