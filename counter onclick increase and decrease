@@ -1,0 +1,53 @@
+ <body>
+         
+          <h1>
+            container
+          </h1>
+        <span class="value" id="value">0</span>
+        <div class="button-container" id="buttons">
+            
+            <button id="decrease" class="btn-decrease">Decrease</button>
+            <button id="reset" class="btn-reset">Reset</button>
+            <button id="increase" class="btn-increase">Increase</button>
+        
+        </div>
+                
+       <script>
+           var value=document.getElementById('value');
+            var dbtn=document.getElementById('decrease');
+            var rbtn=document.getElementById('reset');
+            var ibtn=document.getElementById('increase');
+           var count=0;
+            dbtn.addEventListener('click', decrease)
+           function decrease(){
+               count--;
+                if(count<0){
+                    value.style.color='red';
+                }
+                   
+                   value.innerHTML=count; 
+           }
+           rbtn.addEventListener('click', reset)
+           function reset(){
+               count=0;
+                 if(count==0){
+                   value.style.color='blue';  
+                     
+                 }
+                   
+                   value.innerHTML=count; 
+           }
+           ibtn.addEventListener('click', increase)
+           function increase(){
+               count++;
+                if(count>0){
+                    value.style.color='green';
+                }
+                   
+                   value.innerHTML=count; 
+           }
+            
+        </script>
+       
+         
+    </body>
