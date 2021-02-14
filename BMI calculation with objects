@@ -1,0 +1,40 @@
+<body>
+         
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+                
+       <script>
+            var mark ={
+                fullName: 'mark miller',
+                 
+                weight: 78,
+                height:1.69,
+                calcBMI: function(){
+                    this.bmi=this.weight/Math.pow(this.height,2);
+                }
+            };  
+            
+            var john ={
+                fullName: 'john smith',
+                
+                weight: 100,
+                height:1.45,
+                 calcBMI: function(){
+                    this.bmi=this.weight/Math.pow(this.height,2);
+                }
+            }; 
+             mark.calcBMI();
+           john.calcBMI();
+            document.getElementById('demo').innerHTML=mark.bmi;
+           document.getElementById('demo2').innerHTML= john.bmi;
+            
+           
+           if(mark.bmi>john.bmi){
+                document.getElementById('demo3').innerHTML=`${mark.fullName} BMI (${mark.bmi}) is higher than ${john.fullName} (${john.bmi})`;
+           }else{
+               document.getElementById('demo3').innerHTML= `${john.fullName} BMI (${john.bmi}) is higher than ${mark.fullName} (${mark.bmi})`;
+           }
+           
+        </script>
+       
