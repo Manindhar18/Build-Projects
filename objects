@@ -1,0 +1,19 @@
+  <p id="demo"></p>
+        <p id="demo2"></p>
+                
+       <script>
+             var manindhar={
+                 firstName:'Manindhar',
+                 lastName: 'Baddam',
+                 age:2021-1997,
+                 profession:'student',
+                 country:'India',
+                 friends:['david','martin','russel']
+             };
+           
+           document.getElementById('demo').innerHTML= `${manindhar.firstName} has ${manindhar.friends.length} friends in that ${manindhar.friends[2]} is best friend`;
+           
+        </script>
+       
+         
+    </body>
