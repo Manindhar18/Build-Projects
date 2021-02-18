@@ -1,0 +1,35 @@
+<body>
+         
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+                
+       <script>
+           var calcTip = function(bill){
+               return bill >= 50 && bill <= 300 ?
+                     bill * 0.15:  bill * 0.2;
+           }
+            var bills=[45,67,91,23,11,83,110,283,3,78];
+           var tips=[];
+           var totals=[];
+           
+               for(var i=0;i<bills.length;i++){
+                   var tip =calcTip(bills[i]);
+                    tips.push(tip);
+                   totals.push(tip + bills[i]);
+                   document.getElementById('demo').innerHTML=(bills +' ' + tips + ' ' + totals);
+                    
+               }
+           function calcAverage(arr){
+               var sum = 0;
+               for(var i=0;i<arr.length;i++){
+                   sum += arr[i];
+               }
+               return sum / arr.length;
+           }
+           document.getElementById('demo2').innerHTML= calcAverage(totals);
+           document.getElementById('demo3').innerHTML= calcAverage(tips);
+        </script>
+       
+         
+    </body>
