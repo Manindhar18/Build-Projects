@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        
+    </head>
+    <body>
+    
+        
+   <h1>Guess the Number</h1>
+        <div class='form'>
+        <lable for='guessField'>Enter guess number: </lable>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" value="Submit Guess" class="guessField" id="submitGuess">
+            <p id="demo"></p>
+        </div>
+    <script>
+        
+        var y = Math.floor(Math.random()*5+1);
+        var guess = 1;
+        document.getElementById('submitGuess').onclick= function(){
+           var x = document.getElementById('guessField').value;
+            
+            if(x==y)
+                {
+                 document.getElementById('demo').innerHTML='CONGRATS YOU GUESSED IT RIGHT IN ' + guess +' ' +'GUESS';
+                }
+            else if(x>y){
+               guess++;
+                document.getElementById('demo').innerHTML= 'OOPS SORRY TRY A SMALLER NUMBER';
+            }
+            else
+                {
+                    guess++;
+                    document.getElementById('demo').innerHTML='OOPS SORRY TRY GREATER NUMBER';
+                }
+        }
+        </script>
+       <script>
+      
+        </script>
+       
+         
+    </body>
+ 
+</html>
